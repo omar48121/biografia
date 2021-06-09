@@ -220,6 +220,9 @@ a:hover {
 .starred {
     margin-top: 3vh;
 }
+.mb {
+    margin-bottom: 1em;
+}
 .no-padding {
     padding-inline-start: 0;
 }
