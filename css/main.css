@@ -240,30 +240,98 @@ a:hover {
     text-align: center;
     border-radius: 0.5em;
     box-sizing: border-box;
-  }
-  .card-img {
+}
+.card-img {
     width: 100%;
     display: block;
     border-radius: 0.5em;
     min-height: 90%;
-  }
-  .img-container {
+}
+.img-container {
     display: grid;
     grid-template-rows: 3;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 5px;
-  }
-  @media screen and (max-width: 710px) {
+}
+@media screen and (max-width: 710px) {
     .img-container {
       grid-template-rows: 3;
       grid-template-columns: repeat(2, 1fr);
       justify-content: center;
     }
-  }
-  @media screen and (max-width: 425px) {
+    .nav-bar {
+        justify-content: start;
+    }
+    .nav-link {
+        display: none;
+    }
+}
+@media screen and (max-width: 425px) {
     .img-container {
       grid-template-rows: 3;
       grid-template-columns: repeat(1, 1fr);
       justify-content: center;
     }
+    .info-div {
+        width: 80vw;
+    }
+    .profile-img {
+        width: 30vw;
+    }
+}
+
+/* navbar */
+.navbar-mobile{
+    display: none;
   }
+  input:checked  ~ ul{
+    display:block;
+  }
+  input {
+    display: none;
+  }
+  label {
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+  }
+  label:hover{
+    background: grey;
+  }
+  input:checked ~ label {
+    background: grey; 
+  }
+  .navbar-mobile{
+    margin-top:0;
+    padding: 0;
+    width: 200px;
+  }
+  .navm-item {
+    display: block;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    /* border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff; */
+  }
+  .navm-item:hover {
+    filter: brightness(110%);
+  }
+ @media screen and (min-width: 710px) {
+    .navbar-mobile, #menu, label, input:checked ~ ul {
+        display: none;
+    }
+    .navm-item {
+        display: none;
+    }
+    .nav-bar {
+        justify-content: space-evenly;
+    }
+}
